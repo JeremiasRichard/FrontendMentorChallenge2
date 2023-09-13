@@ -10,7 +10,10 @@ document.addEventListener("DOMContentLoaded", function ()
 
         if (isValidEmail(email)) {
             errorMessage.textContent = "";
+            emailInput.style.borderColor = "0.5px solid";
+            errorIcon.style.display = "";
         } else {
+            emailInput.style.border = '2px solid hsl(0, 71%, 68%)'
             errorMessage.textContent = "Please provide a valid email";
             errorIcon.style.display = "block";
         }

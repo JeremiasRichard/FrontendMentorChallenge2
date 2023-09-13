@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
 
-    <div class="text-section">
-       <div class="text-container">
-            <div class="logo-sector">
-                <div>
-                    <img src="/base-apparel-coming-soon-master/images/logo.svg" alt="">
-                </div>
+<body>
+    <main>
+        <div class="logo-sector">
+            <div>
+                <img src="/base-apparel-coming-soon-master/images/logo.svg" alt="">
             </div>
-            <div class="info-section">
-                <div class="title-sector">
-                    <h1 class="title">WE'RE COMING SOON</h1>
-                </div>
-                <div class="text-sector">
-                    <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-                </div>
-                <div class="email-sector">
-                    <div class="email-container">
-                        <input type="email" placeholder="Email Adress" name="email" id="emailId">   
-                        <button></button>
+        </div>
+        <div class="principal-container">
+            <div class="text-section">
+                <div class="text-container">
+                    <div class="info-section">
+                        <div class="title-sector">
+                            <h1 class="title"> <span class="title-color">WE'RE</span> COMING SOON</h1>
+                        </div>
+                        <div class="text-sector">
+                            <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email
+                                below
+                                to
+                                stay up-to-date with announcements and our launch deals.</p>
+                        </div>
+                        <div class="email-sector">
+                            <div class="email-container">
+                                <input type="email" placeholder="Email Adress" name="email" id="emailId">
+                                <div class="error-icon" id="error-icon"></div>
+                                <button id="validate"></button>
+                            </div>
+                            <div>
+                                <span id="error-message" class="error-message"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-       </div>
-    </div>
-
-
-    <div class="image-section">
-
-    </div>
+            <div class="image-section"></div>
+        </div>
+    </main>
+    <script src="sricpt.js"></script>
 </body>
+
 </html>

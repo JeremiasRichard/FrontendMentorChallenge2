@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Roboto&display=swap');
 
+:root{
+   
+    --width-container-1: 60%;
+    --width-container-2: 40%;
+    --height-logo-sector: 20%;
+    --height-main: 100%;
+    --height-text-section: 80%;
+}
 
 * {
     padding: 0;
@@ -7,78 +15,84 @@
     box-sizing: border-box;
 }
 
-body
-{  display: flex;
+main
+{  
+   display: flex;
    width: 100%;
    height: 100vh;
    font-family: 'Josefin Sans', sans-serif;
 }
-
+.principal-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
 
 /*---- Text Section ----*/
-.text-section{
-    width:60%;
-    height: 100%;
-    border: 2px solid transparent;
-    display: flex;
-    justify-content: center;
-    background-image: url("/base-apparel-coming-soon-master/images/bg-pattern-desktop.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-        border: 2px solid transparent;
-}
-
-.text-container{
-    width: 60%;
-    height: 100%;
-    border: 2px solid transparent;
-    display: flex;
-    flex-direction: column;
-}
-
 .logo-sector{
-    width: 100%;
-    height: 20%;
+    width: var(--width-container-1);
+    height: var(--height-logo-sector);
     border: 2px solid transparent;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: center;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 115;
 }
 
 img{
+    display: flex;
     border: 2px solid transparent;
-    width: 70%;
-    height: 90%;
-    margin-top: 30px;
-    margin-left: 95px;
+    width: 100%;
+    height: 100%;
 }
+
+.text-section{
+    width: var(--width-container-1);
+    height: var(--height-main);
+    background-image: url("/base-apparel-coming-soon-master/images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    border: 2px solid transparent;
+}
+
+.text-container{
+    margin-top: 10%;
+    border : 2px solid transparent;
+    display: flex;
+    justify-content: center;
+}
+
 
 /*----Info-Section*/
 
 .info-section{
+    margin-top: 10%;
     display: flex;
     flex-direction:column;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: var(--width-container-1);
+    height: var(--height-text-section);
     border: 2px solid transparent;
 }
 
 .title-sector{
     padding: 15px;
-    width: 80%;
-    height: 30%;
+    width: var(--height-text-section);
     border: 2px solid transparent;
     display:flex;
     align-items: center;
     letter-spacing: 25px;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .title{
     font-size: 80px;
-    margin-left: 10px;
+    text-align: left;
     font-weight: 600;
     font-family: 'Josefin Sans', sans-serif;
     color:hsl(0, 6%, 24%);
@@ -95,7 +109,6 @@ img{
     height: 15%;
     border: 2px solid transparent;
     display: flex;
-    margin-top: 20px;
     align-items: center;
     text-align: left;
     line-height: 30px;
@@ -111,27 +124,25 @@ p{
 .email-sector{
     width: 80%;
     height: 20%;
-    border: 2px solid transparent;
-    display: flex;
-    flex-direction:column;
+    display: block;
+    flex-direction:row;
     justify-content: left;
     align-items: center;
     padding: 20px;
     font-family: 'Roboto', sans-serif;
-    border: 2px solid transparent;
 }
 
 .email-container{
-    border: 2px solid transparent;
+    margin-top: 10px;
     width: 100%;
-    height: 100%;
+    height: 50%;
     position: relative;
     display:flex;
     align-items: center;
 }
 
 input{
-    height: 65px;
+    height: var(--height-main);
     width: 100%;
     border-radius: 40px;
     border: 1px solid rgb(179, 179, 179);
@@ -139,8 +150,7 @@ input{
     padding: 20px;
     z-index: 101;
     font-size: 1.1em;
-    font-weight: 400; 
-    border: 2px solid gray;   
+    font-weight: 400;
 }
 
 input::placeholder{
@@ -155,7 +165,7 @@ button{
     background: url("/base-apparel-coming-soon-master/images/icon-arrow.svg"), linear-gradient(to right, #FACECF, hsl(0, 71%, 68%));
     background-repeat: no-repeat;
     background-position: center;
-    height: 65px;
+    height: 47px;
     width: 120px;
     border: 1px solid #FACECF;
     border-radius: 40px;
@@ -179,14 +189,12 @@ button:hover{
     text-align: left;
     align-content: center;
     font-size: 14px;
-    width: 90%;
-    margin-left: 15px;
-    border: 2px solid transparent;
+    width: 100%;
 }
 
 .error-icon {
     margin-top: 25px;
-    margin-left: 400px;
+    margin-left: 300px;
     position: absolute;
     transform: translateY(-50%);
     width: 30px; 
@@ -202,8 +210,8 @@ button:hover{
 /*---- Image Section ----*/
 .image-section
 {
-    width: 40%;
-    height: 100%;
+    width: var(--width-container-2);
+    height: var(--height-main);
     background-image: url("/base-apparel-coming-soon-master/images/hero-desktop.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -211,5 +219,169 @@ button:hover{
 
 @media(max-width:768px)
 {
+ 
+    main{
+        display: block;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .logo-sector
+    {   
+        position: absolute;
+        display: flex;
+        justify-content: flex-start;
+        width: 50%;
+        height: 10vh;
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+    
+    img{
+        width: 60%;
+        height: 50%;
+    }
+    
+    .principal-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Una sola columna */
+        flex-direction: row;
+        flex-direction: row-reverse;
+        margin-top: 25%;
+        width: 100%;
+        height: 90vh;
+      }
+      
 
+    .text-section{
+        width: 100%;
+        height: 100%;
+        background-image: url("../base-apparel-coming-soon-master/images/bg-pattern-desktop.svg");
+        background-color: #FFF9F9;
+        background-position: 0 0;
+        display: flex;
+        grid-row: 2;
+    }
+    
+    .text-container{
+        display: block;
+        justify-content: center;
+        margin-top: 0px;
+        width: 100%;
+        height: 100%;
+    }
+
+    /*----Info-Section*/
+    .info-section{
+        margin-top: 0px;
+        display: grid;
+        align-items: center;
+        width: 100%;
+        height: 60vh;
+    }
+
+    .title-sector{
+        width: 100%;
+        display:flex;
+        align-items: center;
+        letter-spacing: 15px;
+        line-height: 1.1;
+    }
+
+    .title{
+        margin-top: 30px;
+        font-size: 40px;
+        text-align: center;
+        font-weight: 600;
+        font-family: 'Josefin Sans', sans-serif;
+        color:hsl(0, 6%, 24%);
+        width: 100%;
+        height: 13vh;
+    }
+
+    .text-sector{
+        margin-top: 40px;
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        line-height: 1.9;
+    }
+    
+    p{  
+        color: hsl(0, 36%, 70%);
+        font-size: 2vh;
+    }
+
+    /*----Email-Section----*/
+    .email-sector{
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 19vh;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .email-container{
+        width: 100%;
+        height: 5vh;
+        display:grid;
+        align-items:center;
+    }
+
+    input{
+
+        height: 40%;
+        width: 100%;
+        border-radius: 40px;
+        border: 1px solid rgb(179, 179, 179);
+        text-align: left;
+        padding: 20px;
+        z-index: 101;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    button{
+        background: url("/base-apparel-coming-soon-master/images/icon-arrow.svg"), linear-gradient(to right, #FACECF, hsl(0, 71%, 68%));
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 28px;
+        height: 45px;
+        width:  65px;
+        border: 1px solid #FACECF;
+        border-radius: 40px;
+        border-width: 0.5px;
+        position: absolute;
+        z-index: 102;
+        right: -0px;
+        cursor: pointer;
+        box-shadow: 10px 10px 15px rgba(0, 0, #FACECF, hsl(0, 71%, 68%)); 
+        transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    .error-message {
+        margin-top: 40px;
+        color: hsl(0, 71%, 68%);
+        text-align: left;
+        align-content: center;
+        font-size: 12px;
+        width: 100%;
+        margin-right: 13px;
+        margin-bottom: 20px;
+    }
+
+    /*---- Image Section ----*/
+    .image-section
+    {   
+        display: flex;
+        width: 100%;
+        height: 37vh;
+        background-image: url("../base-apparel-coming-soon-master/images/hero-mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
