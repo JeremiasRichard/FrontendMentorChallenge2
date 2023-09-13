@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Roboto&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{  display: flex;
+   width: 100%;
+   height: 100vh;
+   font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/*---- Text Section ----*/
+.text-section{
+    width:60%;
+    height: 100%;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: center;
+    background-image: url("/base-apparel-coming-soon-master/images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+        border: 2px solid transparent;
+}
+
+.text-container{
+    width: 60%;
+    height: 100%;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-sector{
+    width: 100%;
+    height: 20%;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+img{
+    border: 2px solid transparent;
+    width: 70%;
+    height: 90%;
+    margin-top: 30px;
+    margin-left: 95px;
+}
+
+/*----Info-Section*/
+
+.info-section{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+}
+
+.title-sector{
+    padding: 15px;
+    width: 80%;
+    height: 30%;
+    border: 2px solid transparent;
+    display:flex;
+    align-items: center;
+    letter-spacing: 25px;
+    line-height: 1.2;
+}
+
+.title{
+    font-size: 80px;
+    margin-left: 10px;
+    font-weight: 600;
+    font-family: 'Josefin Sans', sans-serif;
+    color:hsl(0, 6%, 24%);
+}
+
+.title-color{
+    color:  hsl(0, 36%, 70%);
+    font-weight: 200;
+}
+
+.text-sector{
+    padding: 10px;
+    width: 80%;
+    height: 15%;
+    border: 2px solid transparent;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    text-align: left;
+    line-height: 30px;
+}
+
+p{  
+    padding: 20px;
+    color: hsl(0, 36%, 70%);
+    font-size: 2vh;
+}
+
+/*----Email-Section----*/
+.email-sector{
+    width: 80%;
+    height: 20%;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction:column;
+    justify-content: left;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid transparent;
+}
+
+.email-container{
+    border: 2px solid transparent;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display:flex;
+    align-items: center;
+}
+
+input{
+    height: 65px;
+    width: 100%;
+    border-radius: 40px;
+    border: 1px solid rgb(179, 179, 179);
+    text-align: left;
+    padding: 20px;
+    z-index: 101;
+    font-size: 1.1em;
+    font-weight: 400; 
+    border: 2px solid gray;   
+}
+
+input::placeholder{
+    color: hsl(0, 26%, 75%);
+}
+
+input:focus{
+    outline: none;
+}
+
+button{
+    background: url("/base-apparel-coming-soon-master/images/icon-arrow.svg"), linear-gradient(to right, #FACECF, hsl(0, 71%, 68%));
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 65px;
+    width: 120px;
+    border: 1px solid #FACECF;
+    border-radius: 40px;
+    border-width: 0.5px;
+    position: absolute;
+    z-index: 102;
+    right: -1px;
+    cursor: pointer;
+    box-shadow: 10px 10px 15px rgba(0, 0, #FACECF, hsl(0, 71%, 68%)); 
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover{
+    background: url("/base-apparel-coming-soon-master/images/icon-arrow.svg"), linear-gradient(to right, #FACECF, #FACECF);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.error-message {
+    color: hsl(0, 71%, 68%);
+    text-align: left;
+    align-content: center;
+    font-size: 14px;
+    width: 90%;
+    margin-left: 15px;
+    border: 2px solid transparent;
+}
+
+.error-icon {
+    margin-top: 25px;
+    margin-left: 400px;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 30px; 
+    height: 30px;
+    background-image: url("/base-apparel-coming-soon-master/images/icon-error.svg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+    z-index: 103;
+    border: 2px solid transparent;
+}
+
+/*---- Image Section ----*/
+.image-section
+{
+    width: 40%;
+    height: 100%;
+    background-image: url("/base-apparel-coming-soon-master/images/hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media(max-width:768px)
+{
+
+}
